@@ -207,13 +207,12 @@ Safety disclaimer MUST include:
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'gpt-4o',
+          model: 'gpt-5.1',
           messages: [
             { role: 'system', content: systemPrompt },
             { role: 'user', content: JSON.stringify(assessmentPayload, null, 2) }
           ],
           temperature: 0.1,
-          max_tokens: 2000,
           response_format: { type: 'json_object' },
         }),
       });
